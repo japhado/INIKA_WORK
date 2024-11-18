@@ -1,4 +1,18 @@
-# History files
+# In INIKA I dont want
+data/
+**/.*xlsx
+**/.*csv
+**/.*sqlite
+**/.*fastq.gz
+**/.*fasta
+
+results/
+**.Rprofile
+**.Rhistory
+
+
+
+
 .Rhistory
 .Rapp.history
 
@@ -39,8 +53,7 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-docs/
+
 
 # translation temp files
 po/*~
