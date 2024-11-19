@@ -3,51 +3,67 @@ title: "18-11-2024 course_part1"
 author: "maulid_japhary"
 date: "2024-11-18"
 output:
-
+  pdf_document: default
   html_document: default
 ---
-
-
-# course part 1 - Laboratory
-
-we selected 20 isolates
-
-- 6 "Klebsiella" spp. isolate
-
-- 6 "Escherichia coli" isolates
-
-- 8 "Salmonella" spp. isolates 
-
-
-
-
-
-
-
-
-
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# course part 1 - Laboratory
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+we selected 20 isolates
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+- 6 **Klebsiella** spp. isolate
 
-```{r cars}
-summary(cars)
+- 6 **Escherichia coli** isolates
+
+- 8 **Salmonella** spp. isolates 
+
+## Installation of packaages
+
+
+```{r}
+
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
+```{r}
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+install.packages("here")
+install.packages("DiagrammeR")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+ctrl + alt + I (make a cell - shortcut on the keyboard)
+
+```{r}
+angry_or_not<-"not"
+```
+gives content of the object (container)
+```{r}
+angry_or_not
+```
+
+
+
+
+# working with your data
+
+
+```{r}
+here::here()
+```
+
+
+```{r}
+path_data<-here::here("data/2024-09-25_INIKA_SAMPLING_ANALYSIS_HUMAN.csv")
+path_data
+```
+```{r}
+human_data<-
+  readr::read_csv2(path_data)
+```
+
+
+
