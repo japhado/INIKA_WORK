@@ -4,6 +4,8 @@ author: "maulid_japhary"
 date: "2024-11-18"
 output:
   html_document: default
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -31,6 +33,7 @@ A1 E.coli
 A4 E.coli
 C4 Salmonella spp
 
+Isolates were sub cultured for DNA Extraction were done on 19-11-2024
 ```{r}
 
 ```
@@ -141,5 +144,92 @@ test2*test2
 ```{r}
 test2*c(1,2)
 ```
+
+-deactivate the output in the markdown document:in the document settings
+
+near knit button:only select `chunk output in the console`
+
+-renaming columns names (easier to use)
+
+```{r}
+original_names <- colnames(human_data)
+original_names
+```
+
+```{r}
+New_names <- str_replace_all(original_names, " ","_")
+New_names
+New_names[88]
+```
+ -regex pattern
+```{r}
+New_names2 <- str_replace_all(
+  New_names, "[?/,;.*()-]","_")%>%
+  str_remove_all("(^_*)|(_*$)")
+New_names2
+New_names2[88]
+```
+```{r}
+colnames(human_data) <- New_names2
+```
+
+-selecting columns
+```{r}
+human_data_selection<-
+human_data %>%
+  
+  select(INIKA_OH_TZ_ID, Age__yrs, Gender, Enter_a_date, Region, District, 
+         Specify_if_other_district, Sample, Season, Origin_of_sample, 
+         Which_class_grade_are_you, 
+         Who_is_your_caretaker, 
+         If_others__mention, 
+         What_is_your_occupation_and_or_of_your_caretaker, 
+         Have_you_ever_heard_about_AMR, If_yes__how_did_you_get_this_information, 
+         Have_you_or_your_children_used_any_antibiotics_at_any_time, 
+         If_yes__where_did_you_get_these_drugs_from,
+         If_it_was_drug_sellers_or_pharmacy__did_you_have_a_prescription_from_the_doctor_prescriber,
+         GPS_coordinates_latitude, GPS_coordinates_longitude) 
+
+human_data_selection %>% View()
+
+ head()
+```
+-> viewing your data or better of your data. Notion of pipe and selecting columns
+```{r}
+glimpse(human_data_selection)
+str(human_data_selection)
+```
+#HERE
+-something does not make sense - empty column
+```{r}
+human_data_selection <-
+  human_data_selection %>%
+  select(-Specify_if_other_district) %>%
+  mutate_at(vars(Age__yrs) , as.integer) %>%
+  mutate_if(is.character, factor) %>%
+  mutate_at(vars(INIKA_OH_TZ_ID) , as.character) 
+```
+
+
+```{r}
+levels(test$Region)
+```
+ -summary
+```{r}
+summary(human_data_selection)
+```
+ 
+```{r}
+human_data_selection %>%
+  filter(INIKA_OH_TZ_ID =="238")
+```
+```{r}
+human_data_selection %>%
+  filter(INIKA_OH_TZ_ID =="238") %>%
+  filter(is.na(Gender))%>%
+ view()
+```
+#summary()
+
 
 
