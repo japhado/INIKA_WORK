@@ -3,7 +3,6 @@ title: "18-11-2024 course_part1"
 author: "maulid_japhary"
 date: "2024-11-18"
 output:
-  pdf_document: default
   html_document: default
 ---
 
@@ -20,9 +19,17 @@ we selected 20 isolates
 - 6 **Escherichia coli** isolates
 
 - 8 **Salmonella** spp. isolates 
+# course 2 Labworks (tuesday)
+##Results of isolates species identification
 
-## Installation of packaages
 
+![](`Files/VITECK RESULTS19_11_2024.pdf`)
+
+
+picture of results
+A1 E.coli
+A4 E.coli
+C4 Salmonella spp
 
 ```{r}
 
@@ -31,8 +38,8 @@ we selected 20 isolates
 
 ```{r}
 
-install.packages("here")
-install.packages("DiagrammeR")
+#install.packages("here")
+#install.packages("DiagrammeR")
 ```
 
 ctrl + alt + I (make a cell - shortcut on the keyboard)
@@ -65,5 +72,74 @@ human_data<-
   readr::read_csv2(path_data)
 ```
 
+
+
+
+
+
+
+# Day 3
+## packages into memory
+```{r}
+library(here)
+library(tidyverse)
+```
+
+
+
+## Getting help - and what function do
+
+F1
+
+
+```{r}
+?library()
+```
+
+## we get out data
+```{r}
+path_data<-here::here("data/2024-09-25_INIKA_SAMPLING_ANALYSIS_HUMAN.csv")
+path_data
+```
+
+
+```{r}
+human_data <-
+  readr::read_csv2(path_data)
+```
+
+## Exploration of a data frame 
+- Names of columns
+```{r}
+colnames(human_data)
+```
+
+-getting the columns names into a vector for pasting and manipulations
+- i can use a function within a function!
+```{r}
+dput(
+  colnames(human_data)
+)
+```
+-explanation:c() is to make vector
+```{r}
+test <-c("one","2",3)
+test
+test[3]
+typeof(test[3])
+typeof(test)
+
+class(test)
+```
+
+```{r}
+test2 <-c(1,2,3)
+typeof(test2)
+class(test2)
+test2*test2
+```
+```{r}
+test2*c(1,2)
+```
 
 
