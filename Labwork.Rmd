@@ -1,0 +1,45 @@
+---
+title: "Lab work"
+author: "maulid_japhary"
+date: "2024-11-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# course part 1 - Laboratory
+
+we selected 20 isolates
+
+- 6 **Klebsiella** spp. isolate
+
+- 6 **Escherichia coli** isolates
+
+- 8 **Salmonella** spp. isolates 
+
+# course 2 Labworks (tuesday)
+
+##Results of isolates species identification
+
+<!--
+This is to view an image/file when knitted
+![integrated pdf](VITECK RESULTS19_11_2024.pdf)
+-->
+
+<!-- I have made a link to a file -->
+[linked pdf](VITECK RESULTS19_11_2024.pdf)
+
+
+
+![](`Files/VITECK RESULTS19_11_2024.pdf`)
+
+
+picture of results
+A1 E.coli
+A4 E.coli
+C4 Salmonella spp
+
+Isolates were subcultured for DNA Extraction were done on 19-11-2024
+
