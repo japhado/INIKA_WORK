@@ -3,7 +3,16 @@ title: "Lab work"
 author: "maulid_japhary"
 date: "2024-11-20"
 output:
+  html_document:
+    df_print: paged
+    number_sections: true
+    
   pdf_document: default
+  
+  word_document: default
+
+
+urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
@@ -30,16 +39,15 @@ This is to view an image/file when knitted
 ![integrated pdf](Files/VITECK_RESULTS19_11_2024.pdf)
 -->
 
-You can look at the results as a
+
+![results 1](Files/VITECK_RESULTS19_11_2024_1.png)
+</br>
+
+![resuts 2](Files/VITECK_RESULTS19_11_2024_2.png)
+</br>
+
+You can also look at the results as a
 [linked pdf](Files/VITECK_RESULTS19_11_2024.pdf)
-
-<!--
-![results 1](Files/)
-</br>
-
-![resuts 2](Files/)
-</br>
--->
 
 <!-- ![](Files/VITECK/RESULTS19_11_2024.pdf) -->
 <u>I will work with those isolate for the rest of the laboratory work:</u>
