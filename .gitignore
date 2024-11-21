@@ -5,14 +5,22 @@ data/
 **/.*sqlite
 **/.*fastq.gz
 **/.*fasta
-
+**/.*pdf
 results/
 **.Rprofile
 **.Rhistory
 
+# added to support the repo root
+*.xlsx
+*.csv
+*.sqlite
+# will need to be removed when you want to add those files
+*.html
+*.pdf
+*.docx
 
 
-
+# Original
 .Rhistory
 .Rapp.history
 
