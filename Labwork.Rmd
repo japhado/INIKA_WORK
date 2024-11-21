@@ -2,7 +2,8 @@
 title: "Lab work"
 author: "maulid_japhary"
 date: "2024-11-20"
-output: html_document
+output:
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -21,25 +22,31 @@ we selected 20 isolates
 
 # course 2 Labworks (tuesday)
 
-##Results of isolates species identification
+## Results of isolates species identification
 
-<!--
+
+<!-- 
 This is to view an image/file when knitted
-![integrated pdf](VITECK RESULTS19_11_2024.pdf)
+![integrated pdf](Files/VITECK_RESULTS19_11_2024.pdf)
 -->
 
-<!-- I have made a link to a file -->
-[linked pdf](VITECK RESULTS19_11_2024.pdf)
+You can look at the results as a
+[linked pdf](Files/VITECK_RESULTS19_11_2024.pdf)
 
+<!--
+![results 1](Files/)
+</br>
 
+![resuts 2](Files/)
+</br>
+-->
 
-![](`Files/VITECK RESULTS19_11_2024.pdf`)
+<!-- ![](Files/VITECK/RESULTS19_11_2024.pdf) -->
+<u>I will work with those isolate for the rest of the laboratory work:</u>
 
+- A1 E.coli
+- A4 E.coli
+- C4 Salmonella spp
 
-picture of results
-A1 E.coli
-A4 E.coli
-C4 Salmonella spp
-
-Isolates were subcultured for DNA Extraction were done on 19-11-2024
+Isolates were sub cultured for DNA Extraction were done on 19-11-2024
 
