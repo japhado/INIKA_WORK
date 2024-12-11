@@ -28,3 +28,69 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# creating a message
+```{r}
+my_message <- "Hello World"
+print(my_message)
+```
+```{r}
+my_message
+typeof(my_message)
+str(my_message)
+```
+```{r}
+length(my_message)
+nchar(my_message)
+
+nb_char <- nchar(my_message)
+nb_char
+nb_char + 10
+nb_char * nchar(my_message)
+```
+# assignment of objects in R
+```{r}
+strsplit(my_message, split = "")
+
+split_test <- strsplit(my_message, split = "") 
+split_test
+typeof(split_test)
+
+split_test[1]
+split_test[[1]]
+split_test[[1]][1]
+split_test[[1]][1:3]
+```
+# transforming a string into a list of characters (types conversion)
+```{r}
+unlist(split_test)
+split_test <-unlist(split_test)
+split_test
+
+split_test[1]
+typeof(split_test)
+length(split_test)
+
+```
+# manipulations with functions that allows to transform objects
+```{r}
+3*3+1
+(3*3)+1
+
+(3*(3+1))
+```
+# Installing packages
+```{r}
+# A comment
+# Another way to get help on a function
+?install.packages
+help("install.packages")
+# F1 on : install.packages()
+```
+
+# installing here package
+```{r}
+# installing here package
+install.packages("here", dependencies = TRUE)
+```
+
