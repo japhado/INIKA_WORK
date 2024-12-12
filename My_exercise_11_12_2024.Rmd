@@ -2,7 +2,10 @@
 title: "My_exercise_11_12_2024"
 author: "maulid_japhary"
 date: "2024-12-11"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
